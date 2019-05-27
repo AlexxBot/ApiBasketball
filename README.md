@@ -1,2 +1,2 @@
 # ApiBasketball
-Servicio ApiRest creada con express y mongodb
+Servicio ApiRest con express y mongodb
