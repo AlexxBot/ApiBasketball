@@ -8,7 +8,8 @@ const app = express();
 const jugadoresRoutes = require('./routes/jugadores');
 const personasRoutes = require('./routes/personas');
 
-mongoose.connect('mongodb://localhost/basketball_api',{
+//mongoose.connect('mongodb://localhost/basketball_api',{
+mongoose.connect("mongodb+srv://Alexx_Bot:Dotacinema2@cluster0-l3zbo.mongodb.net/test?retryWrites=true&w=majority",{
     useMongoClient: true
 }).then(db => console.log('db is conected'))
   .catch(err => console.log(err));
