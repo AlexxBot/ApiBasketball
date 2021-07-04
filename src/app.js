@@ -31,6 +31,11 @@ app.use('/personas', personasRoutes);
 
 
 //start the server
+
+app.get('/', (req, res) => {
+  res.json('basketball api is working')
+  
+})
 app.listen(app.get('port'), () => {
     console.log('server on port', app.get('port'));
 });
