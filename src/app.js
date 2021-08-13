@@ -2,6 +2,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const app = express();
 
@@ -16,6 +17,14 @@ mongoose.connect('mongodb+srv://AlexxBot:Dotacinema2@cluster0-aux0d.mongodb.net/
 //settings
 app.set('port', process.env.PORT || 3000);
 
+
+const corsOptions = {
+  origin: '*'
+}
+
+
+
+app.use(cors(corsOptions))
 //middleware
 app.use(bodyParser.json());
 app.use(morgan('dev'));
